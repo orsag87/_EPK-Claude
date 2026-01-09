@@ -1,0 +1,13 @@
+# Mac system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Backup files
+*.bak
+*~
+
+# Don't ignore images - we need them!
+# (This is just a comment for clarity)
