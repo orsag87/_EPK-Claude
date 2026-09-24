@@ -105,3 +105,28 @@ section.wrap{padding-top:88px}
   .line{font-size:28px}
   .two{grid-template-columns:320px 1fr}
 }
+
+/* v3: character + color */
+:root{--blue:#7cfe04;--bg:#131313;--slate:#4b5c66}
+body{background:radial-gradient(1100px 650px at 90% -10%,rgba(124,254,4,.07),transparent 60%),radial-gradient(900px 700px at -10% 45%,rgba(75,92,102,.35),transparent 65%),var(--bg);background-attachment:fixed}
+h2{font-family:Unbounded,system-ui,sans-serif;font-weight:800;text-transform:lowercase;letter-spacing:-.04em;line-height:.95;font-size:clamp(40px,10vw,56px)}
+h2:after{content:".";color:var(--blue)}
+.kicker{color:var(--blue);font-weight:600}
+.rel b,.cap b,.list b{font-family:Unbounded,system-ui,sans-serif;font-weight:500;letter-spacing:-.02em}
+.rel b{font-size:17px;margin-bottom:2px}
+.rel img{border-radius:10px;transition:transform .35s}
+.rel:hover img{transform:translateY(-4px) rotate(-.6deg)}
+.news-line strong{color:#fff}
+.btn-solid{background:var(--blue);border-color:var(--blue);color:#131313;font-weight:600}
+.hero-img{object-position:50% 35%}
+.hero-shade{background:linear-gradient(180deg,rgba(19,19,19,.05) 0%,rgba(19,19,19,.25) 50%,rgba(19,19,19,.96) 100%)}
+.list li{border-color:rgba(255,255,255,.08)}
+.list li:hover b{color:var(--blue)}
+@media (min-width:768px){h2{font-size:clamp(64px,7vw,96px)}}
+@media (max-width:767px){.hero-img{object-position:66% 30%}}
+/* v3 fix: headings sit above content, never beside it */
+@media (min-width:768px){.two{grid-template-columns:1fr;gap:0}.two>h2,.two>div:first-child{max-width:none}}
+h2{overflow-wrap:normal;word-break:normal;max-width:100%}
+/* brand guide: Chivo Mono for subheads */
+.kicker,.cap,.rel figcaption,.figcap,.list span,.more,.short summary{font-family:"Chivo Mono",ui-monospace,monospace;font-weight:400;letter-spacing:0}
+.kicker{letter-spacing:.06em}
