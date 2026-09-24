@@ -130,3 +130,8 @@ h2{overflow-wrap:normal;word-break:normal;max-width:100%}
 /* brand guide: Chivo Mono for subheads */
 .kicker,.cap,.rel figcaption,.figcap,.list span,.more,.short summary{font-family:"Chivo Mono",ui-monospace,monospace;font-weight:400;letter-spacing:0}
 .kicker{letter-spacing:.06em}
+/* palette blue #4a669f, used sparingly: hover states + a hint in the side glow */
+body{background:radial-gradient(1100px 650px at 90% -10%,rgba(124,254,4,.07),transparent 60%),radial-gradient(900px 700px at -10% 45%,rgba(74,102,159,.22),transparent 65%),var(--bg);background-attachment:fixed}
+.list li:hover b{color:#4a669f}
+a:hover{text-decoration-color:#4a669f}
+.more a:hover,.socials a:hover{color:#4a669f}
