@@ -1,0 +1,206 @@
+:root{--bg:#0e0e0f;--fg:#ecebe7;--dim:#9a9893;--line:#2a2a2c;--accent:#e8e4da}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h2{font:400 34px/1 "Bebas Neue",Impact,sans-serif;letter-spacing:.02em;margin:0 0 22px}
+section.wrap{padding-top:64px}
+section+section{border-top:0}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 6px}
+
+/* hero */
+.hero{position:relative;min-height:clamp(520px,88vh,820px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,15,.15) 0%,rgba(14,14,15,.35) 45%,rgba(14,14,15,.95) 100%)}
+.hero-text{position:relative;width:100%;padding-bottom:48px}
+.logo{width:min(320px,62vw);height:auto;margin:0 0 14px}
+.line{font-size:20px;margin:0 0 22px;color:#f3f1ec}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid rgba(236,235,231,.45);border-radius:999px;text-decoration:none;font-size:15px;font-weight:500}
+.btn:hover{border-color:var(--fg)}
+.btn-solid{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+section.news{padding-top:36px}
+.news-line{margin:0;font-size:18px;color:var(--fg)}
+.news-line strong{font-weight:600}
+
+.two{display:grid;gap:8px}
+.two p{margin:0 0 14px;max-width:62ch}
+.short{margin-top:10px;color:var(--dim)}
+.short summary{cursor:pointer;font-size:15px}
+.short p{margin-top:8px}
+
+.videos{display:grid;gap:22px}
+.video{text-decoration:none}
+.thumb{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#1a1a1b}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.video:hover .thumb img{transform:scale(1.02)}
+.play{position:absolute;left:14px;bottom:14px;width:44px;height:44px;border-radius:50%;background:rgba(14,14,15,.7)}
+.play:after{content:"";position:absolute;left:17px;top:13px;border-left:14px solid var(--fg);border-top:9px solid transparent;border-bottom:9px solid transparent}
+.cap{display:block;margin:10px 0 0;color:var(--dim);font-size:15px}
+.cap b{display:block;color:var(--fg);font-weight:600;font-size:16px}
+
+.mixes{display:grid;gap:22px}
+.mix .cap{margin:0 0 8px}
+.mix iframe{border-radius:6px;display:block}
+.more{color:var(--dim);font-size:15px;margin:18px 0 0}
+
+.releases{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.rel{margin:0;text-decoration:none}
+.rel img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px}
+.rel figcaption,.figcap{display:block;margin-top:10px;color:var(--dim);font-size:14px;line-height:1.45}
+.rel b{display:block;color:var(--fg);font-weight:600;font-size:16px}
+
+.list,.plain{list-style:none;margin:0;padding:0}
+.list li{padding:14px 0;border-top:1px solid var(--line)}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list b{display:block;font-weight:600}
+.list span{color:var(--dim);font-size:15px}
+.plain li{padding:6px 0}
+.plain li:before{content:"-  ";color:var(--dim)}
+
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.photos figure{margin:0}
+.photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px}
+.photos .wide{grid-column:1/-1}
+.photos .wide img{aspect-ratio:16/9}
+.photos figcaption{color:var(--dim);font-size:14px;margin-top:8px}
+.actions.left{margin-top:14px}
+
+.contact .big{font-size:24px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--dim)}
+.socials a{margin-right:14px;color:var(--dim);text-decoration:none;white-space:nowrap}
+.socials a:hover{color:var(--fg)}
+
+.foot{padding:72px 22px 40px;color:var(--dim);font-size:14px}
+
+@media (min-width:768px){
+  body{font-size:18px}
+  section.wrap{padding-top:96px}
+  h2{font-size:44px}
+  .two{grid-template-columns:260px 1fr;gap:40px}
+  .videos{grid-template-columns:repeat(3,1fr)}
+  .mixes{grid-template-columns:1fr 1fr}
+  .releases{grid-template-columns:repeat(4,1fr)}
+  .photos{grid-template-columns:1fr 1fr 2fr}
+  .photos .wide{grid-column:auto}
+  .photos .wide img{aspect-ratio:2.05/1}
+  .hero-text{padding-bottom:72px}
+  .line{font-size:24px}
+}
+
+/* 2026 polish: bigger type, more air */
+h2{font-size:clamp(48px,11vw,64px);line-height:.9;letter-spacing:0;margin-bottom:28px}
+section.wrap{padding-top:88px}
+.hero{min-height:clamp(560px,100svh,960px)}
+.logo{width:min(440px,78vw)}
+.line{letter-spacing:-.01em}
+.btn{min-height:48px;padding:0 22px}
+.list li{padding:18px 0}
+.list b{font-size:20px;letter-spacing:-.01em}
+@media (min-width:768px){
+  section.wrap{padding-top:140px}
+  h2{font-size:clamp(72px,8vw,112px)}
+  .line{font-size:28px}
+  .two{grid-template-columns:320px 1fr}
+}
+
+/* v3: character + color */
+:root{--blue:#7cfe04;--bg:#131313;--slate:#4b5c66}
+body{background:radial-gradient(1100px 650px at 90% -10%,rgba(124,254,4,.07),transparent 60%),radial-gradient(900px 700px at -10% 45%,rgba(75,92,102,.35),transparent 65%),var(--bg);background-attachment:fixed}
+h2{font-family:Unbounded,system-ui,sans-serif;font-weight:800;text-transform:lowercase;letter-spacing:-.04em;line-height:.95;font-size:clamp(40px,10vw,56px)}
+h2:after{content:".";color:var(--blue)}
+.kicker{color:var(--blue);font-weight:600}
+.rel b,.cap b,.list b{font-family:Unbounded,system-ui,sans-serif;font-weight:500;letter-spacing:-.02em}
+.rel b{font-size:17px;margin-bottom:2px}
+.rel img{border-radius:10px;transition:transform .35s}
+.rel:hover img{transform:translateY(-4px) rotate(-.6deg)}
+.news-line strong{color:#fff}
+.btn-solid{background:var(--blue);border-color:var(--blue);color:#131313;font-weight:600}
+.hero-img{object-position:50% 35%}
+.hero-shade{background:linear-gradient(180deg,rgba(19,19,19,.05) 0%,rgba(19,19,19,.25) 50%,rgba(19,19,19,.96) 100%)}
+.list li{border-color:rgba(255,255,255,.08)}
+.list li:hover b{color:var(--blue)}
+@media (min-width:768px){h2{font-size:clamp(64px,7vw,96px)}}
+@media (max-width:767px){.hero-img{object-position:66% 30%}}
+/* v3 fix: headings sit above content, never beside it */
+@media (min-width:768px){.two{grid-template-columns:1fr;gap:0}.two>h2,.two>div:first-child{max-width:none}}
+h2{overflow-wrap:normal;word-break:normal;max-width:100%}
+/* brand guide: Chivo Mono for subheads */
+.kicker,.cap,.rel figcaption,.figcap,.list span,.more,.short summary{font-family:"Chivo Mono",ui-monospace,monospace;font-weight:400;letter-spacing:0}
+.kicker{letter-spacing:.06em}
+/* palette blue #4a669f, used sparingly: hover states + a hint in the side glow */
+body{background:radial-gradient(1100px 650px at 90% -10%,rgba(124,254,4,.07),transparent 60%),radial-gradient(900px 700px at -10% 45%,rgba(74,102,159,.22),transparent 65%),var(--bg);background-attachment:fixed}
+.list li:hover b{color:#4a669f}
+a:hover{text-decoration-color:#4a669f}
+.more a:hover,.socials a:hover{color:#4a669f}
+
+/* Hero depth and clean text navigation. Motion is off when the viewer asks for less. */
+.hero{isolation:isolate;min-height:clamp(560px,100svh,960px)}
+.hero-img{height:116%;top:-8%;bottom:auto;transform:translate3d(0,calc(var(--hero-scroll,0px) * .16),0);will-change:transform}
+.hero-nav{display:flex;gap:clamp(20px,4vw,48px);flex-wrap:wrap;align-items:center}
+.hero-nav a{color:#f3f1ec;text-decoration:none;border-bottom:1px solid rgba(243,241,236,.5);padding:9px 0;font:500 14px/1.3 "Chivo Mono",monospace;letter-spacing:.02em}
+.hero-nav a span{color:var(--blue);padding-left:8px}
+.hero-nav a:hover,.hero-nav a:focus-visible{border-bottom-color:var(--blue)}
+.release-intro{color:var(--dim);font-size:15px;margin:0 0 22px}
+.tracks{border-top:1px solid var(--line)}
+.track{display:grid;grid-template-columns:38px 1fr 20px;gap:14px;align-items:center;padding:18px 8px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s}
+.track:hover{background:rgba(124,254,4,.06)}
+.track-no,.track-arrow,.track-group{color:var(--blue);font:400 13px/1.5 "Chivo Mono",monospace}
+.track b{display:block;font:500 clamp(17px,2vw,23px)/1.35 Unbounded,sans-serif}
+.track small{display:block;color:var(--dim);font:400 13px/1.5 "Chivo Mono",monospace;margin-top:4px}
+.track-arrow{font-size:22px}
+.track-group{padding:22px 8px 10px;border-bottom:1px solid var(--line)}
+.track-group a{color:var(--blue);text-decoration:none}
+@media (prefers-reduced-motion:reduce){.hero-img{transform:none!important;will-change:auto}}
+@media (max-width:767px){.hero-img{height:130%;top:-15%}.hero-nav{gap:18px}.track{grid-template-columns:28px 1fr 20px;gap:10px}}
+
+/* 2026 edition: editorial pacing rather than one continuous stack */
+:root{--acid:#7cfe04;--paper:#e6e4db}
+.edition-bar{display:flex;justify-content:space-between;gap:20px;padding:15px max(22px,calc((100vw - 1036px)/2));background:var(--acid);color:#141513;font:600 11px/1.3 "Chivo Mono",monospace;letter-spacing:.11em}
+.hero-edition{display:inline-block;margin:0 0 26px;padding-top:13px;border-top:1px solid rgba(255,255,255,.6);font:400 12px/1.3 "Chivo Mono",monospace;text-transform:uppercase;letter-spacing:.16em;color:#ddd}
+.hero-edition span{color:var(--acid)}
+main{overflow:hidden}
+main>section.wrap{position:relative;padding-top:96px;padding-bottom:104px}
+main>section.wrap h2{position:relative}
+main>section.wrap h2:before{content:"";display:block;width:42px;height:3px;background:var(--acid);margin-bottom:25px}
+main>#watch{padding-top:118px}
+main>#listen,main>#photos,main>#rider{max-width:none;padding-left:max(22px,calc((100vw - 1036px)/2));padding-right:max(22px,calc((100vw - 1036px)/2));background:#1d1e1c}
+main>#listen{background:linear-gradient(125deg,#212820 0%,#191b1b 65%,#1d1e1c 100%)}
+main>#photos{background:#212522}
+main>#releases{padding-top:112px}
+main>#shows{background:#e1e0d6;color:#171a16;max-width:none;padding-left:max(22px,calc((100vw - 1036px)/2));padding-right:max(22px,calc((100vw - 1036px)/2))}
+main>#shows h2{color:#171a16}
+main>#shows .list li{border-color:#bbbdb2}
+main>#shows .list span{color:#4f554d}
+main>#shows .list li:hover b{color:#394d25}
+main>#about{padding-top:115px;padding-bottom:120px}
+main>#about p:first-child:first-letter{font-size:1.25em;color:var(--acid)}
+main>#contact{background:#0b0c0b;max-width:none;padding-left:max(22px,calc((100vw - 1036px)/2));padding-right:max(22px,calc((100vw - 1036px)/2));padding-bottom:120px;border-top:1px solid #343a30}
+main>#contact .big{font-size:clamp(18px,3vw,32px);overflow-wrap:anywhere}
+.photo-break{height:clamp(360px,65vw,680px);position:relative;background-color:#252725;background-repeat:no-repeat;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.photo-break:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(5,9,5,.78));pointer-events:none}
+.photo-break-stage{background-image:url('images/web/11-broll-sxsw.jpg');background-position:center 37%}
+.photo-break-village{height:clamp(340px,50vw,540px);background-image:url('images/web/hero-shambhala.jpg');background-position:center 50%}
+.photo-break-label{position:relative;z-index:1;width:min(1036px,calc(100% - 44px));margin:0 auto 26px;display:flex;justify-content:space-between;align-items:center;color:#fff;font:500 clamp(16px,2.5vw,28px)/1.2 Unbounded,sans-serif;text-transform:uppercase;letter-spacing:-.03em;text-shadow:0 1px 10px #111}
+.photo-break-label em{font:400 12px/1.4 "Chivo Mono",monospace;font-style:normal;color:var(--acid);letter-spacing:.08em}
+.foot{max-width:none;display:flex;justify-content:space-between;gap:16px;padding:25px max(22px,calc((100vw - 1036px)/2));border-top:1px solid #303430;font-family:"Chivo Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:767px){
+  main>section.wrap{padding-top:72px;padding-bottom:78px}
+  main>#watch,main>#releases,main>#about{padding-top:78px}
+  main>#about,main>#contact{padding-bottom:88px}
+  .photo-break-stage{background-position:50% 42%}
+  .photo-break-village{background-position:50% 45%}
+  .photo-break-label{font-size:16px}
+  .edition-bar{font-size:9px;letter-spacing:.04em}
+  .foot{flex-direction:column}
+}
+
+/* Artwork and collaborator credits are part of the discography, not hidden on mobile. */
+.discography{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 36px}
+.release-art{min-width:0}
+.release-art img{width:100%;aspect-ratio:1;object-fit:cover;border:1px solid #3a3d35}
+.release-art span{display:block;margin-top:10px;color:#c4c8bb;font:400 11px/1.45 "Chivo Mono",monospace;letter-spacing:.03em}
+.track small.credits{color:#e4e3d9;font-size:14px}
+@media(max-width:767px){.discography{gap:8px}.release-art span{font-size:9px;line-height:1.35}.track small.credits{font-size:12px;color:#e2e3d9}}
