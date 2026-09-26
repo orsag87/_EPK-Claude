@@ -138,7 +138,7 @@ a:hover{text-decoration-color:#4a669f}
 
 /* Hero depth and clean text navigation. Motion is off when the viewer asks for less. */
 .hero{isolation:isolate;min-height:clamp(560px,100svh,960px)}
-.hero-img{height:116%;top:-8%;bottom:auto;transform:translate3d(0,calc(var(--hero-scroll,0px) * .28),0);will-change:transform}
+.hero-img{height:116%;top:-8%;bottom:auto;transform:translate3d(0,calc(var(--hero-scroll,0px) * .16),0);will-change:transform}
 .hero-nav{display:flex;gap:clamp(20px,4vw,48px);flex-wrap:wrap;align-items:center}
 .hero-nav a{color:#f3f1ec;text-decoration:none;border-bottom:1px solid rgba(243,241,236,.5);padding:9px 0;font:500 14px/1.3 "Chivo Mono",monospace;letter-spacing:.02em}
 .hero-nav a span{color:var(--blue);padding-left:8px}
@@ -154,4 +154,4 @@ a:hover{text-decoration-color:#4a669f}
 .track-group{padding:22px 8px 10px;border-bottom:1px solid var(--line)}
 .track-group a{color:var(--blue);text-decoration:none}
 @media (prefers-reduced-motion:reduce){.hero-img{transform:none!important;will-change:auto}}
-@media (max-width:767px){.hero-img{height:110%;top:-5%}.hero-nav{gap:18px}.track{grid-template-columns:28px 1fr 20px;gap:10px}}
+@media (max-width:767px){.hero-img{height:130%;top:-15%}.hero-nav{gap:18px}.track{grid-template-columns:28px 1fr 20px;gap:10px}}
