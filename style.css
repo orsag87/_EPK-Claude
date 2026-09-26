@@ -204,3 +204,75 @@ main>#contact .big{font-size:clamp(18px,3vw,32px);overflow-wrap:anywhere}
 .release-art span{display:block;margin-top:10px;color:#c4c8bb;font:400 11px/1.45 "Chivo Mono",monospace;letter-spacing:.03em}
 .track small.credits{color:#e4e3d9;font-size:14px}
 @media(max-width:767px){.discography{gap:8px}.release-art span{font-size:9px;line-height:1.35}.track small.credits{font-size:12px;color:#e2e3d9}}
+
+
+/* Quiet editorial pass: the photography and artwork carry the impact. */
+:root{--bg:#141615;--fg:#e9e8e2;--dim:#a7aaa4;--line:#393d39;--acid:#a8c17e;--blue:#a8c17e}
+body{background:var(--bg);color:var(--fg);font-size:16px;line-height:1.65;background-attachment:initial}
+.wrap{max-width:1092px;padding-left:28px;padding-right:28px}
+.hero{min-height:clamp(520px,78svh,800px)}
+.hero-img{height:100%;top:0;transform:none;will-change:auto}
+.hero-shade{background:linear-gradient(180deg,rgba(13,17,17,.05) 0%,rgba(13,17,17,.25) 46%,rgba(13,17,17,.86) 100%)}
+.hero-text{padding-bottom:54px}
+.logo{width:min(330px,64vw);margin-bottom:12px}
+.line,.line:not(:empty){font-size:18px;line-height:1.5;margin-bottom:16px;letter-spacing:0}
+.hero-edition{font-size:10px;letter-spacing:.12em;margin-bottom:18px;padding-top:10px;color:#e0e0d9;border-color:rgba(255,255,255,.35)}
+.hero-nav{gap:28px}
+.hero-nav a{font-size:12px;font-weight:400;border-color:rgba(243,241,236,.35);padding:7px 0}
+.hero-nav a span{color:var(--acid)}
+.edition-bar{background:transparent;color:var(--dim);border-bottom:1px solid var(--line);font-size:10px;font-weight:400;letter-spacing:.08em;padding-top:18px;padding-bottom:18px}
+main>section.wrap{padding-top:76px;padding-bottom:82px}
+main>#watch,main>#releases,main>#about{padding-top:84px}
+main>#about,main>#contact{padding-bottom:86px}
+main>section.wrap h2{font:500 clamp(27px,4vw,39px)/1.18 Unbounded,system-ui,sans-serif;letter-spacing:-.045em;text-transform:none;margin:0 0 32px;color:var(--fg)}
+main>section.wrap h2:before,main>section.wrap h2:after{content:none;display:none}
+main>#listen,main>#photos,main>#rider,main>#shows,main>#contact{background:transparent;color:var(--fg);border-top:1px solid var(--line)}
+main>#listen,main>#photos,main>#rider,main>#shows,main>#contact{padding-left:max(28px,calc((100vw - 1036px)/2));padding-right:max(28px,calc((100vw - 1036px)/2))}
+main>#shows h2{color:var(--fg)}
+main>#shows .list li{border-color:var(--line)}
+main>#shows .list span{color:var(--dim)}
+main>#shows .list li:hover b{color:var(--fg)}
+main>#about p:first-child:first-letter{font-size:inherit;color:inherit}
+main>#contact{border-color:var(--line)}
+.photo-break{height:clamp(330px,47vw,520px)}
+.photo-break-village{height:clamp(300px,42vw,460px)}
+.photo-break:after{content:none}
+.cap,.rel figcaption,.figcap,.list span,.more,.short summary{font-size:13px;line-height:1.55}
+.cap b,.rel b,.list b{font-family:Inter,system-ui,sans-serif;letter-spacing:-.01em;font-size:16px;font-weight:500}
+.list li{padding:14px 0}
+.list b{font-size:17px}
+.list li:hover b,.more a:hover,.socials a:hover{color:var(--fg)}
+.release-intro{font-size:14px;max-width:64ch}
+.discography{gap:14px;margin-bottom:30px}
+.release-art img{border:0}
+.release-art span{color:var(--dim);font-size:10px}
+.track{padding:15px 4px;transition:none}
+.track:hover{background:rgba(255,255,255,.025)}
+.track b{font:500 clamp(15px,2vw,18px)/1.4 Inter,system-ui,sans-serif;letter-spacing:-.01em}
+.track-no,.track-arrow,.track-group,.track-group a{color:var(--dim)}
+.track small,.track small.credits{font-size:12px;color:var(--dim)}
+.track-group{padding:18px 4px 9px}
+.rel img{border-radius:3px;transition:none}
+.rel:hover img{transform:none}
+.thumb,.photos img,.mix iframe{border-radius:2px}
+.contact .big,main>#contact .big{font-size:clamp(18px,2.5vw,26px);font-weight:400}
+.foot{border-color:var(--line);color:var(--dim)}
+@media(min-width:768px){.line{font-size:20px}.two{grid-template-columns:1fr;gap:0}}
+@media(max-width:767px){
+ .wrap{padding-left:22px;padding-right:22px}
+ .hero{min-height:clamp(490px,72svh,700px)}
+ .hero-img{height:100%;top:0;object-position:66% 30%}
+ .hero-text{padding-bottom:40px}
+ .logo{width:min(285px,72vw)}
+ .hero-nav{gap:18px}
+ .edition-bar{font-size:9px}
+ main>section.wrap{padding-top:58px;padding-bottom:64px}
+ main>#watch,main>#releases,main>#about{padding-top:64px}
+ main>#about,main>#contact{padding-bottom:68px}
+ main>section.wrap h2{font-size:28px;margin-bottom:24px}
+ main>#listen,main>#photos,main>#rider,main>#shows,main>#contact{padding-left:22px;padding-right:22px}
+ .discography{gap:8px}
+ .release-art span{font-size:9px}
+ .track{grid-template-columns:25px 1fr 15px;gap:8px}
+ .track small.credits{font-size:11px}
+}
