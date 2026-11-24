@@ -276,3 +276,48 @@ main>#contact{border-color:var(--line)}
  .track{grid-template-columns:25px 1fr 15px;gap:8px}
  .track small.credits{font-size:11px}
 }
+
+/* 2026-11 hero: face-forward portrait, bigger mark, credentials, one clear booking action */
+.hero{background:#0c0c0c;align-items:flex-end}
+.hero-img{object-position:62% 18%}
+.hero-shade{background:linear-gradient(180deg,rgba(12,12,12,0) 28%,rgba(12,12,12,.55) 56%,rgba(12,12,12,.97) 100%)}
+.hero-edition{font-size:13px;margin:0 0 20px;border-top:0;padding-top:0}
+.hero .line{margin-bottom:20px}
+.hero-creds{list-style:none;margin:0 0 32px;padding:0;display:flex;flex-direction:column;gap:9px;font:400 13px/1.35 "Chivo Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:#dcdad3}
+.hero-creds li:before{content:"";display:inline-block;width:7px;height:7px;background:var(--acid);margin:0 12px 1px 0;vertical-align:middle}
+.hero-nav{gap:14px 26px}
+.hero-nav a.hero-book{display:inline-flex;align-items:center;min-height:50px;padding:0 24px;border:0;border-radius:999px;background:var(--acid);color:#111;font-weight:600;font-size:15px}
+.hero-nav a.hero-book span{color:#111}
+.hero-nav a.hero-book:hover,.hero-nav a.hero-book:focus-visible{background:#fff;border:0}
+@media (min-width:900px){
+  .hero{align-items:center}
+  .hero-img{left:auto;right:0;width:60%;object-position:45% 30%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+  .hero-shade{background:linear-gradient(90deg,#0c0c0c 0%,rgba(12,12,12,.7) 34%,rgba(12,12,12,0) 58%),linear-gradient(180deg,rgba(12,12,12,0) 72%,rgba(12,12,12,.92) 100%)}
+  .hero-text{padding-bottom:0;padding-top:40px}
+  .hero .logo{width:min(620px,48vw);margin-bottom:18px}
+  .hero-creds{gap:11px;font-size:14px}
+}
+
+/* 2026-11 press portraits: added under the original photos, each tile downloads full size */
+.press-head{margin:64px 0 6px;font:500 clamp(21px,2.6vw,27px)/1.2 Unbounded,system-ui,sans-serif;letter-spacing:-.04em;color:var(--fg)}
+.press-note{margin:0 0 20px}
+.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.press-shot{position:relative;display:block;overflow:hidden;border-radius:6px;background:#1a1a1b;text-decoration:none}
+.press-shot img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .4s}
+.press-shot span{position:absolute;left:8px;bottom:8px;padding:5px 9px;border-radius:999px;background:rgba(12,12,12,.72);color:#f3f1ec;font:400 13px/1.2 "Chivo Mono",monospace}
+.press-shot:hover img{transform:scale(1.03)}
+.press-shot:hover span,.press-shot:focus-visible span{background:var(--acid);color:#111}
+@media (min-width:768px){.press-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
+
+/* Phones and small tablets: photo on top, type below it, so the logo never covers the face. */
+@media (max-width:899px){
+  .hero{display:block;min-height:0}
+  .hero-img{position:relative;inset:auto;display:block;width:100%;height:min(60svh,560px);object-position:45% 30%}
+  .hero-shade{bottom:auto;height:min(60svh,560px);background:linear-gradient(180deg,rgba(12,12,12,0) 50%,rgba(12,12,12,.6) 80%,#0c0c0c 100%)}
+  .hero-text{margin-top:-84px;padding-bottom:44px}
+  .hero .logo{width:min(340px,82vw)}
+  .hero-nav{gap:12px 22px}
+}
+
+/* Film grain over the hero, drawn at screen resolution so it reads the same on phones and desktops. */
+.hero-grain{position:absolute;inset:0;background:url('images/web/grain.png') repeat;background-size:128px 128px;mix-blend-mode:overlay;opacity:.5;pointer-events:none}
