@@ -327,3 +327,9 @@ main>#contact{border-color:var(--line)}
 .press-shot.wide{grid-column:span 2}
 .press-shot.wide img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
 @media (max-width:767px){.press-shot.wide{aspect-ratio:16/10}}
+
+/* Film grain on every photo shown on the page (screen only; download files stay clean). */
+.press-shot::after,.photo-break::after{content:"";position:absolute;inset:0;background:url('images/web/grain.png') repeat;background-size:128px 128px;mix-blend-mode:overlay;opacity:.5;pointer-events:none}
+.press-shot span{z-index:2}
+/* Last Shambhala photo: stage grade (new file; the original stays in place). */
+.photo-break-village{background-image:url('images/web/hero-shambhala-film.jpg')}
