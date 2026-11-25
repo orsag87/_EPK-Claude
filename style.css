@@ -321,3 +321,9 @@ main>#contact{border-color:var(--line)}
 
 /* Film grain over the hero, drawn at screen resolution so it reads the same on phones and desktops. */
 .hero-grain{position:absolute;inset:0;background:url('images/web/grain.png') repeat;background-size:128px 128px;mix-blend-mode:overlay;opacity:.5;pointer-events:none}
+
+/* One photo grid: Shambhala spans two tiles so every row fills; dense flow closes the gap on phones. */
+.press-grid{grid-auto-flow:dense}
+.press-shot.wide{grid-column:span 2}
+.press-shot.wide img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+@media (max-width:767px){.press-shot.wide{aspect-ratio:16/10}}
